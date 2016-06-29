@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
     outfile.open(argv[2],ios::out);
     tempfile.open("temp_file.input",ios::out);
     
- 
     if (!infile.is_open()) 
     {
     cout<<"Please check the file name \n";
@@ -79,10 +78,7 @@ int main(int argc, char *argv[])
         
         cout<<"\nNumber of pages required : "<<number_of_pages;
 
-
         int j = 0,  l = 0, ni = 0;
-
-     
         long long int n =0, k =0;
 
        /*Dynamic allocation of memory for 2d array blocks[][] starts*/
@@ -115,9 +111,7 @@ int main(int argc, char *argv[])
 
             if(n>=memory_bytes)
             {
-        
         quickSort(arrdemo2d, 0, memory_bytes - 1,order);
-
         for(long long int x = 0; x < n; x++)
             {
                 blocks[k][x] = arrdemo2d[x]; 
@@ -150,16 +144,13 @@ int main(int argc, char *argv[])
         mergeSort(arrfinal,0,total_records-1,order);
         cout<<"\nWriting in a "<<argv[2]<<" file...\n";
 
-
-
             for(int z = 0; z<total_records; z++)
             {
                 
                    outfile<<arrfinal[z]<<endl;
                    
             }
- 
-   
+
 cout<<"\nYour file is Sorted..";   
 double stop_s=clock();
 double miliseconds = (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000;
@@ -176,7 +167,6 @@ infile.close();
 return 0;
     }
 
- 
 void quickSort(long long int a[], long long int first, long long int last, int order ) 
 {
     long long int pivotElement;
@@ -189,8 +179,6 @@ void quickSort(long long int a[], long long int first, long long int last, int o
         quickSort(a, pivotElement+1, last,order);
     }
 }
- 
-
 
 long long int pivot(long long int a[], long long int first, long long int last, int order) 
 {
@@ -217,23 +205,18 @@ long long int pivot(long long int a[], long long int first, long long int last, 
             }
 
         } // else ascending order
-
     }
- 
     swap(a[p], a[first]);
  
     return p;
 }
  
- 
-
 void swap(long long int& a, long long int& b)
 {
     long temp = a;
     a = b;
     b = temp;
 }
- 
 
 void swapNoTemp(long long int& a, long long int& b)
 {
