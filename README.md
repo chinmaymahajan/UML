@@ -28,6 +28,8 @@ Program Execution
   number_of_pages = total_records / memory_bytes; //number of pages required 
   
   •	Reading and Sorting chunks (equal to memory_bytes) of data as per the size specified by user. 
+  
   •	Merging those chunks and simultaneously sorting them. 
+  
   •	Writing the sorted data in the output file.    
   
